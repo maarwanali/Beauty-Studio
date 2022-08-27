@@ -9,7 +9,7 @@ function ContactUs() {
   return (
     <div id="contact-us" className="w-[100%] my-20">
       <div className="mycontainer flex-col-center">
-        <h2 className="text-xl my-5 text-slate-600 font-bold text-opacity-70 ">
+        <h2 className="text-base sm:text-lg md:text-xl my-5 text-slate-600 font-bold text-opacity-70 text-center ">
           Свяжитесь с нами, Подписывайтесь на наши соцсети..
         </h2>
 
@@ -21,9 +21,9 @@ function ContactUs() {
           </Link>
         </div>
 
-        {/* <div className="flex-center text-slate-500 font-bold">
-          <p className="mx-1 "> позвоните на</p> <p>+375111111</p>
-        </div> */}
+        <div className="flex-center text-slate-500 font-bold">
+          <p className="mx-1 my-2 ">+375333813627</p>
+        </div>
       </div>
     </div>
   );

@@ -3,11 +3,11 @@ import Image from "next/image";
 
 function WorkTime() {
   return (
-    <div className="w-[100%] my-7 hidden md:block py-5 bg-pink-400 bg-opacity-40  relative">
+    <div className="w-[100%] hidden md:block py-5 bg-pink-400 bg-opacity-40  relative">
       <div className="absolute top-0 right-0 left-0 bottom-0 h-[100%] bg-pink-200 bg-opacity-40  "></div>
 
       <div className="flex-col-center">
-        <h2 className="w-[200px] mx-auto my-5 font-bold text-lg text-white z-20 ">
+        <h2 className="w-[200px] mx-auto my-8 font-bold text-lg text-white z-20 ">
           рабочее время
         </h2>
 

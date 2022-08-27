@@ -29,7 +29,7 @@ function Footer({ services }) {
           <div className="flex-col-center">
             <h2 className="uppercase font-bold">rockey</h2>
 
-            <p>+37511111111</p>
+            <p>+375333813627</p>
             <p
               onClick={() => {
                 router.push("https://www.instagram.com/rocky_studiooo");
