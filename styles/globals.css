@@ -107,3 +107,79 @@ body {
     background-color: pink;
   }
 }
+
+.main-title {
+  text-transform: uppercase;
+  margin: 0 auto 50px;
+  border: 2px solid rgba(0, 0, 0, 0.596);
+  padding: 10px 20px;
+  font-size: 25px;
+  color: rgb(71 85 105);
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+@media (max-width: 500px) {
+  .main-title {
+    font-size: 18px;
+  }
+}
+.main-title::before,
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #a7fcc6;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}

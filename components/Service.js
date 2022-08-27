@@ -76,18 +76,19 @@ function Service({ name, imgsrc, price, servId }) {
         </>
       )}
 
-      <h4 className="my-2 font-bold text-lg opacity-80 text-slate-500">
+      <h4 className="my-2 py-1 px-3 font-bold text-xl opacity-80 text-slate-500">
         {name}
       </h4>
 
       <Image src={imgsrc} alt="" width="250" height="250px" />
 
       <p className="font-bold text-sm text-red-500 relative my-3">
-        {price} <small className="absolute top-[-2px] right-[-10px]">P</small>
+        от {price}{" "}
+        <small className="absolute top-[-2px] right-[-10px]">P</small>
       </p>
 
       <button
-        className="py-1 px-2 my-3 font-bold opacity-60 bg-slate-400 shadow-md shadow-gray-500 text-white hover:bg-slate-500 hover:text-white transition-all duration-300"
+        className="py-1 px-2 my-3 font-bold opacity-60 border-2 border-white bg-black bg-opacity-50 shadow-lg shadow-gray-500 text-white hover:bg-green-500 hover:text-white transition-all duration-300"
         onClick={() => setOpenWindow(true)}
       >
         Запись

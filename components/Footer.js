@@ -6,9 +6,8 @@ import { FaTelegram } from "react-icons/fa";
 
 function Footer({ services }) {
   const router = useRouter();
-  console.log(services);
   return (
-    <div className="w-[100%]  relative">
+    <div className="w-[100%]  relative mt-24">
       <div className="absolute top-0 right-0 left-0 bottom-0 h-[100%] bg-black bg-opacity-20  "></div>
 
       <div className="mycontainer flex-col-center ">

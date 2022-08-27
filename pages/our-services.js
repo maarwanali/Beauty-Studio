@@ -5,18 +5,19 @@ import AddServ from "../components/AddServ";
 import { useSelector } from "react-redux";
 import { selectAdmin } from "../slices/AdminSlice";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { PuplishServ } from "../slices/Services";
+
 function Services({ services }) {
   const [openForm, setOpenForm] = useState(false);
   const admin = useSelector(selectAdmin);
-  console.log(services);
+
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%] mt-9">
       {openForm && <AddServ closeLayout={setOpenForm} />}
 
-      <div className="mycontainer flex-col-center  relative ">
-        <h1 className=" mt-5 text-lg text-slate-500 uppercase  font-bold mb-5">
-          услуги{" "}
-        </h1>
+      <div className="mycontainer flex-col-center  relative  ">
+        <h1 className="main-title ">услуги </h1>
         <div className=" flex justify-center items-center flex-wrap gap-10">
           {services?.map((serv) => {
             return (

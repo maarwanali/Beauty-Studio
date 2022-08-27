@@ -6,8 +6,13 @@ import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import Landing from "../components/Landing";
 import WorkTime from "../components/WorkTime";
+import { useDispatch } from "react-redux";
+import { PuplishServ } from "../slices/Services";
 
-export default function Home({ services }) {
+export default function Home(services) {
+  const dispatch = useDispatch();
+
+  dispatch(PuplishServ({ serv: services }));
   return (
     <div>
       <Head>
@@ -27,14 +32,11 @@ export default function Home({ services }) {
 
         {/* contact-us */}
         <ContactUs />
-        {/* foooter */}
-        <Footer services={services} />
       </main>
-
-      <footer></footer>
     </div>
   );
 }
+
 export const getServerSideProps = async () => {
   const allData = await axios.get(
     `${process.env.NEXT_PUBLIC_URL}/api/v1/services`

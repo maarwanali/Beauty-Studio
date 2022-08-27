@@ -14,6 +14,7 @@ function AboutUs() {
       className="w-[100vw] border-b-2 border-slate-600 border-opacity-10  shadow-sm shadow-white "
     >
       <div className="mycontainer  flex flex-col justify-between items-center">
+        <h2 className="main-title">О нас</h2>
         <div className="flex  justify-center items-center mb-20  flex-col lg:flex-row lg:justify-between">
           <div className=" flex  mb-7 ">
             <div className="bg-black flex flex-col">

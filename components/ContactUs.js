@@ -9,8 +9,9 @@ function ContactUs() {
   return (
     <div id="contact-us" className="w-[100%] my-20">
       <div className="mycontainer flex-col-center">
+        <h1 className="main-title">Свяжитесь с нами</h1>
         <h2 className="text-base sm:text-lg md:text-xl my-5 text-slate-600 font-bold text-opacity-70 text-center ">
-          Свяжитесь с нами, Подписывайтесь на наши соцсети..
+          Подписывайтесь ..
         </h2>
 
         <div className="flex items-center justify-between ">
@@ -19,10 +20,6 @@ function ContactUs() {
               <FiInstagram className="mx-2 " /> Instgram
             </p>
           </Link>
-        </div>
-
-        <div className="flex-center text-slate-500 font-bold">
-          <p className="mx-1 my-2 ">+375333813627</p>
         </div>
       </div>
     </div>

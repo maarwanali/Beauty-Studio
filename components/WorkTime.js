@@ -7,9 +7,7 @@ function WorkTime() {
       <div className="absolute top-0 right-0 left-0 bottom-0 h-[100%] bg-pink-200 bg-opacity-40  "></div>
 
       <div className="flex-col-center">
-        <h2 className="w-[200px] mx-auto my-8 font-bold text-lg text-white z-20 ">
-          рабочее время
-        </h2>
+        <h2 className="main-title ">рабочее время</h2>
 
         <div className=" w-[100%]  flex justify-between ">
           <div className="time-table">
