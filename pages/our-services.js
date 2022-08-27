@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Service from "../components/Service";
 import { MdAddModerator } from "react-icons/md";
 import AddServ from "../components/AddServ";
 import { useSelector } from "react-redux";
 import { selectAdmin } from "../slices/AdminSlice";
 import axios from "axios";
-import { useDispatch } from "react-redux";
-import { PuplishServ } from "../slices/Services";
 
 function Services({ services }) {
   const [openForm, setOpenForm] = useState(false);
@@ -33,7 +31,7 @@ function Services({ services }) {
         </div>
         {admin.admin === `${process.env.NEXT_PUBLIC_ADMIN}` && (
           <div
-            className=" fixed bottom-[670px] right-5 sm:bottom-10 sm:right-10 group  "
+            className=" fixed bottom-[670px] right-5 sm:bottom-10 sm:right-10 group z-10"
             onClick={() => setOpenForm(!openForm)}
           >
             <MdAddModerator

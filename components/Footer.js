@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { BsInstagram } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { FaTelegram } from "react-icons/fa";
+import axios from "axios";
 
-function Footer({ services }) {
+function Footer() {
   const router = useRouter();
+  const [services, setServices] = useState();
+
+  useEffect(() => {
+    const getServices = async () => {
+      const allData = await axios.get(
+        `${process.env.NEXT_PUBLIC_URL}/api/v1/services`
+      );
+      setServices(allData.data.allServices);
+    };
+    getServices();
+  }, []);
+
   return (
     <div className="w-[100%]  relative mt-24">
       <div className="absolute top-0 right-0 left-0 bottom-0 h-[100%] bg-black bg-opacity-20  "></div>
@@ -18,8 +31,8 @@ function Footer({ services }) {
         </div>
 
         <div className="text-white z-10 flex justify-between items-center w-[100%]">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-lg font-bold">услуги</h2>
+          <div className="flex flex-col justify-center h-[150px] overflow-hidden">
+            <h2 className="text-lg font-bold ">услуги</h2>
             {services?.map((serv) => {
               return <p key={serv._id}> {serv.servName}</p>;
             })}

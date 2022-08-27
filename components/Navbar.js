@@ -71,7 +71,10 @@ function Navbar() {
           <>
             {drop && (
               <ClickAwayListener onClickAway={handleClickAway}>
-                <ul className=" absolute top-20 w-[200px]  right-3 bg-slate-800 bg-opacity-50 lg:top-0  lg:w-[60%] lg:mx-auto  lg:bg-transparent  lg:relative lg:flex lg:justify-between">
+                <ul
+                  onClick={() => setDrop(false)}
+                  className=" absolute top-20 w-[200px]  right-3 bg-slate-800 bg-opacity-50 lg:top-0  lg:w-[60%] lg:mx-auto  lg:bg-transparent  lg:relative lg:flex lg:justify-between"
+                >
                   <Link href="/">
                     <li className="link">главная</li>
                   </Link>
@@ -143,3 +146,50 @@ function Navbar() {
 }
 
 export default Navbar;
+
+{
+  /* <ul className=" absolute top-20 w-[200px]  right-3 bg-slate-800 bg-opacity-50 lg:top-0  lg:w-[60%] lg:mx-auto  lg:bg-transparent  lg:relative lg:flex lg:justify-between">
+<Link href="/">
+  <li className="link" onClick={() => setDrop(false)}>
+    главная
+  </li>
+</Link>
+<Link href="#about-us">
+  <li className="link" onClick={() => setDrop(false)}>
+    О нас
+  </li>
+</Link>
+<Link href="#contact-us">
+  <li className="link" onClick={() => setDrop(false)}>
+    {" "}
+    Свяжитесь с нами
+  </li>
+</Link>
+<Link href="/our-services">
+  <li className="link" onClick={() => setDrop(false)}>
+    Наши услуги{" "}
+  </li>
+</Link>
+{admin ? (
+  <li
+    className="link"
+    onClick={() => {
+      handleLougout;
+      setDrop(false);
+    }}
+  >
+    выйти
+  </li>
+) : (
+  <li
+    className="link"
+    onClick={() => {
+      setSignin(true);
+      setDrop(false);
+    }}
+  >
+    Aдминистратор
+  </li>
+)}
+</ul> */
+}
